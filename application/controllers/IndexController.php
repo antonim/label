@@ -10,7 +10,11 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        
+        
+        $user = new Application_Model_User();
+        $userList = $user->fetchAll();
+        print_r($userList->toArray());
     }
 
 
